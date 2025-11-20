@@ -16,6 +16,6 @@ app.get("/api/products", (req, res) => {
 
 app.listen(PORT, (req, res) => {
     connectDB();
-    console.log(process.env.MONGO_URI)
+    // console.log(process.env.MONGO_URI)
     console.log(`Listening on port: ${PORT}`);
 })
