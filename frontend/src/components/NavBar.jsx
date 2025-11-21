@@ -18,10 +18,10 @@ const NavBar = () => {
           fontSize={{ base: "22", sm: "28" }}
           fontWeight={"bold"}
           textAlign={"center"}
-          bgGradient={"linear(to-r, cyan.400, blue.500)"}
+          bgGradient={"linear(to-r, cyan.300, blue.400)"}
           bgClip={"text"}
         >
-        <Link to={"/"}>PRODUCT STORE</Link>
+        <Link to={"/"}>TIENDA MERN</Link>
         </Text>
         <HStack spacing={2} alignItems={"center"}>
           <Link to={"/create"}>
@@ -31,7 +31,7 @@ const NavBar = () => {
           </Link>
           {/* <Link to={"/"}> */}
             <Button onClick={toggleColorMode}>
-              Toggle {colorMode === "light" ? "Dark" : "Light"}
+              {colorMode === "light" ? "Dark" : "Light"} Mode
             </Button>
           {/* </Link> */}
         </HStack>

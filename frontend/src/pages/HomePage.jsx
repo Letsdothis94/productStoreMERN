@@ -18,11 +18,11 @@ const HomePage = () => {
         <Text
           fontSize={"30"}
           fontWeight={"bold"}
-          bgGradient={"linear(to-r, cyan.400, blue.500)"}
+          bgGradient={"linear(to-r, cyan.300, blue.400)"}
           bgClip={"text"}
           textAlign={"center"}
         >
-          Current Products
+          Available Products
         </Text>
 
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10} w={"full"}>
@@ -31,18 +31,24 @@ const HomePage = () => {
           ))}
         </SimpleGrid>
 
-        {
-          !products.length === 0 && (
-            <Text fontSize="xl" textAlign={"center"} fontWeight={"bold"} color={"gray.500"}
-            >
-              No Products found! {""}
-              <Link to={"/create"}>
-                <Text as={"span"} color={"blue.500"} _hover={{ textDecoration: "underline" }}
-                >
-                  Create Product
-                </Text>
-              </Link>
-            </Text>
+        {!products.length === 0 && (
+          <Text
+            fontSize="xl"
+            textAlign={"center"}
+            fontWeight={"bold"}
+            color={"gray.500"}
+          >
+            No Products found! {""}
+            <Link to={"/create"}>
+              <Text
+                as={"span"}
+                color={"blue.500"}
+                _hover={{ textDecoration: "underline" }}
+              >
+                Create Product
+              </Text>
+            </Link>
+          </Text>
         )}
       </VStack>
     </Container>
